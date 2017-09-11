@@ -1,4 +1,5 @@
 # Curve Cipher
+# 曲路密码，包含加密码与解密
 # -*- coding: utf-8 -*-
 
 def create_list(n):
@@ -78,12 +79,13 @@ def curve(code, mode):
         return result_return
 
 
-# code = """iiknx-aakms-agluv-afhtu-filsy-knoot-eekmp-ahnvy-efipz-hiklo-dekot-adfim-closu-efxyz"""
-code = """gesfc inpho dtmwu qoury zejre hbxva lookT"""
-# code = """!yo leu ovI"""
-# plaintext = """I Love You!"""
-plaintext = """I love you!"""
-# plaintext = """Thequickbrownfoxjumpsoverthelazydog"""
 
-print curve(code, mode="decrypt")
+# plaintext = """Thequickbrownfoxjumpsoverthelazydog"""
+code = """gesfc inpho dtmwu qoury zejre hbxva lookT"""
+
+plaintext = """I love you!"""
+# code = """!yo leu ovI"""
+
 print curve(plaintext, mode="encrypt")
+print curve(code, mode="decrypt")
+
