@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 # Caesar cipher
-# 凯撒密码解密
+# 凯撒密码加解密
 
-lstr="""UJ>Kxqefpfpklqbjlgfz"""  #密文
-for p in range(127):
-    str1 = ''
-    for i in lstr:
-        temp = chr((ord(i)+p)%127)
-        if 32<ord(temp)<127 :
-            str1 = str1 + temp
-            feel = 1
-        else:
-            feel = 0
-            break
-    if feel == 1:
-        print '第%d个:%s'%(p,str1)  #明文
+
+code = """I love you!"""
+
+sr1 = "abcdefghijklmnopqrstuvwxyz"
+sr2 = sr1.upper()
+sr = sr1 + sr1 + sr2 + sr2
+st = code
+sResult = ""
+for rot in range(26):
+    for j in st:
+        if j == " ":
+            sResult = sResult + " "
+            continue
+        i = sr.find(j)
+        if i > -1:
+            sResult = sResult + sr[i + rot]
+    print sResult
+    sResult = ''
