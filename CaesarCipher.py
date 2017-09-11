@@ -18,5 +18,5 @@ for rot in range(26):
         i = sr.find(j)
         if i > -1:
             sResult = sResult + sr[i + rot]
-    print sResult
+    print "ROT%s:%s" % (rot, sResult)
     sResult = ''
